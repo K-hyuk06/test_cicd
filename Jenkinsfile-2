@@ -1,0 +1,19 @@
+pipeline {
+    agent none
+    stages {
+        stage('Test1'){
+            agent { dockerfile true}
+            steps {
+                sh 'pytest /app/test_app.py'
+                sh 'ls -al'
+            }
+        }
+        tage('Test2'){
+            agent any
+            steps {
+                sh 'ls -al'
+            }
+        }
+    }
+
+}
