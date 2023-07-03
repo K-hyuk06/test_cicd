@@ -3,4 +3,4 @@ RUN apt update -y
 WORKDIR /app
 COPY app.py /app
 RUN pip install pytest
-ENTRYPOINT ["pytest","test_app.py"]
+ENTRYPOINT ["pytest","/app/test_app.py"]
