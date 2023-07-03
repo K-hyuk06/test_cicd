@@ -8,7 +8,7 @@ pipeline {
                 sh 'ls -al'
             }
         }
-        tage('Test2'){
+        stage('Test2'){
             agent any
             steps {
                 sh 'ls -al'
